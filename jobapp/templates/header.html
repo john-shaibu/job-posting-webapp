@@ -1,0 +1,121 @@
+<header>
+      <div class="container">
+            <div class="top-header">
+                  <div class="logo"><a href="{{ url_for('job.index') }}"><i class="ri-bubble-chart-fill"></i></a></div>
+                  <nav>
+                  <ul>
+                        <li><a href="{{ url_for('job.index') }}" target="_top" title="Home"><i class="ri-home-5-line"></i></a></li>
+                        <li class='notification-trigger'>
+                              <a target="_top" title="notification"><i class="ri-notification-4-line"></i></a>
+                        </li>
+                        <li><a class="search-trigger" title="Search"><i class="ri-search-line"></i></a></li>
+                        {% if g.user %}
+                              <li class="menu">
+                                    <a><div class="avatar"><img  src="{{ url_for('static', filename='images/image1.jpg') }}" alt="user-avatar"></div></a>
+                                    <div class="menu-container">
+                                          <ul>
+                                                <li class="profile">
+                                                      <a href="{{ url_for('job.profile_page', id = g.user.id) }}" target="_top">
+                                                      <div class="dp"><img src="{{ url_for('static', filename='images/image1.jpg') }}" alt="user-avatar"></div>
+                                                            <div class="name">
+                                                            <strong>{{g.user.lastname}} {{g.user.firstname}}</strong>
+                                                            <span>See my resume</span>
+                                                            </div>
+                                                      </a>
+                                                </li>
+                                                <li>
+                                                      <a href="{{ url_for('auth.login_recruiter') }}" target="_top">
+                                                            <i class="ri-briefcase-line"></i>
+                                                            <span>Become a recruiter</span>
+                                                      </a>
+                                                </li>
+                                                <li>
+                                                      <a href="{{ url_for('recruiter.dashboard') }}" target="_top">
+                                                            <i class="ri-dashboard-line"></i>
+                                                            <span>Switch to recruiter</span>
+                                                      </a>
+                                                </li>
+                                                <li>
+                                                      <a href="#" target="_top">
+                                                            <i class="ri-bookmark-line"></i>
+                                                            <span>Bookmarks</span>
+                                                      </a>
+                                                </li>
+                                                <li>
+                                                      <a href="#" target="_top">
+                                                            <i class="ri-settings-3-line"></i>
+                                                            <span>Settings</span>
+                                                      </a>
+                                                </li>
+                                                <li>
+                                                      <a href="{{ url_for('auth.logout') }}" target="_top" id="signout">
+                                                            <i class="ri-logout-box-r-line"></i>
+                                                            <span>Sign out</span>
+                                                      </a>
+                                                </li>
+                                          </ul> 
+                                    </div>
+                              </li>    
+                        {% else %}
+                              <l1 class="signin"><a href="{{ url_for('auth.login') }}">Sign in</a></l1>
+                        {% endif %}
+                  </ul>
+                  </nav>
+            </div>
+            <div class="search">
+                  <div class="search-wrapper">
+                  <form action="#" method="get">
+                        <input type="search" name="" id="" placeholder="Search for jobs">
+                        <button type="submit"><i class="ri-search-line"></i></button>
+                  </form>
+                  </div>
+                  <div class="job-search-suggest">
+                  <i id="close-trigger" class="ri-close-line"></i>
+                  <!-- <div class="recent-search-container">
+                        <h3><i class="ri-history-line"></i>Recent Search</h3>
+                        <div class="recent">
+                              <a href="#"><span>Web Developer</span><i class="ri-close-line" title="Remove" onclick="this.parentElement.style.display='none';"></i></a>
+                              <a href="#"><span>FrontEnd Developer</span><i class="ri-close-line"  title="Remove" onclick="this.parentElement.style.display='none';"></i></a>
+                              <a href="#"><span>Cloud Developer</span><i class="ri-close-line" title="Remove"  onclick="this.parentElement.style.display='none';"></i></a>
+                        </div>
+                  </div> -->
+                  <div class="hot-jobs-container">
+                        <h3><i class="ri-fire-line"></i>Hot Jobs</h3>
+                        <div class="hot-jobs">
+                              <a href="#" target="_top">Backend developer at LantopInfotech</a>
+                              <a href="#" target="_top">Lead FrontEnd Developer at Thelighthubng</a>
+                              <a href="#" target="_top">Software Engineer at GoogleLLC</a>
+                              <a href="#" target="_top">Cloud developer at TheGrooveTechnologies</a>
+                        </div>
+                  </div>     
+                  </div>
+                  
+                  
+            </div>
+      </div>
+      <script>
+   
+            //toggle between displaying menu and hiding menu
+            const menuBtn = document.querySelector(".menu a");
+            const displayMenu = document.querySelector("nav");
+
+            menuBtn.addEventListener('click', function() {
+                  displayMenu.classList.toggle("showmenu");
+            });
+
+            //script for search bar===================================
+
+            const searchBtn = document.querySelector('.search-trigger');
+            const closeBtn = document.querySelector('#close-trigger');
+            const clt = document.querySelector(".site");
+
+            searchBtn.addEventListener('click', () =>{
+                  clt.classList.add('showsearch');
+            });
+
+            closeBtn.addEventListener('click', () =>{
+                  clt.classList.remove('showsearch');
+            });
+
+      </script>
+</header>

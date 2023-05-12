@@ -1,0 +1,47 @@
+{% extends 'postjob.html' %}
+
+{% block title %}Add some compensation{% endblock %}
+
+{% block section_header %}Add some compensation{% endblock %}
+
+{% block content %}
+
+      <div class="salary_type">
+            <label for="salary_type">Select Job salary type</label>
+            <select name="salary_type" id="">
+                  <option value="" disabled selected>Select Job salary type</option>
+                  <option value="starting">Starting Salary</option>
+                  <option value="range">Salary Range</option>
+                  <option value="fixed">Fixed Salary</option>
+            </select>
+      </div>
+      <div class="starting">
+            <div>
+                  <label for="starting_salary">Enter starting Salary</label>
+                  <input type="text" name="starting_salary" id="" required>
+            </div>
+            <div>
+                  <label for="starting_salary_duration">Salary Duration</label>
+                  <select name="starting_salary_duration" id="" required>
+                        <option value="" disabled selected>Select Duration</option>
+                        <option value="Monthly">Monthly</option>
+                        <option value="Bi Weekly">Bi Weekly</option>
+                        <option value="Weekly">Weekly</option>
+                        <option value="Daily">Daily</option>
+                        <option value="Per Hour">Hourly</option>
+                  </select>
+            </div>
+
+      </div>
+
+      
+{% endblock %}
+      
+{% block Buttons %}
+      
+      <div class="btn-group">
+            <button type="button" class="btn-prev" onclick="window.history.back()">Go back</button>
+            <button type="submit" class="btn-submit">Save & Continue</button>
+      </div> 
+
+{% endblock %}

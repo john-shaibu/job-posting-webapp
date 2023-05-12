@@ -1,0 +1,101 @@
+<!--
+      <form action="#" method="post">
+            <div class="section">
+                  <div>
+                        <div class="section_header">
+                              <h2>Job Requirement</h2>
+                        </div>
+                        <div class="section_inner">
+                              <div class="text-editor">
+                                    <div class="controls">
+                                          <button type="button" id="bold" class="option-button format"><i class="ri-bold"></i></button>
+                                          <button type="button" id="insertUnorderedList" class="option-button"><i class="ri-list-unordered"></i></button>
+                                          <button type="button" id="undo" class="option-button"><i class="ri-arrow-go-back-line"></i></button>
+                                          <button type="button" id="redo" class="option-button"><i class="ri-arrow-go-forward-line"></i></button>
+                                    </div>
+                                    <div class="display" contenteditable="True" id="displayInput">
+                                          
+                                    </div>
+                                    <script>
+                                          let optionButton = document.querySelectorAll('.option-button');
+                                          let controlUndo = document.getElementById('control-undo');
+                                          let controlRedo = document.getElementById('control-redo');
+                                          let controlBold = document.getElementById('control-bold');
+                                          let controlList = document.getElementById('control-list');
+                                          let displayInput = document.getElementById('displayInput');
+                                          let formatBtn = document.querySelectorAll('.format');
+
+                                          const initializer = () =>{
+                                                highlighter(formatBtn, false);
+                                          }
+
+                                          const highlighter = (className, needsRemoval) => {
+                                                className.forEach((button) => {
+                                                      button.addEventListener('click', () =>{
+                                                            if(needsRemoval){
+                                                                  let alreadyActive = false;
+
+                                                                  if(button.classList.contains('activeControl')){
+                                                                        alreadyActive = true;
+                                                                  }
+
+                                                                  highlighterRemoval(className);
+                                                                  if(!alreadyActive){
+                                                                        button.classList.add('activeControl');
+                                                                  }
+                                                            }
+                                                            else{
+                                                                  button.classList.toggle('activeControl');
+                                                            }
+                                                      });
+                                                
+                                                });
+                                          }
+                                          const highlighterRemoval = () =>{
+                                                className.forEach((button) => {
+                                                      button.classList.remove('activeControl');
+                                                });
+                                          }
+                                          const modifyText = (command, defaultUi, value) =>{
+                                                document.execCommand(command, defaultUi, value);
+                                          }
+                                          optionButton.forEach(button => {
+                                                button.addEventListener('click', () => {
+                                                      modifyText(button.id, false, null);
+                                                });
+                                          });
+
+                                    </script>
+                             </div>
+                        </div>    
+                  </div>
+            </div>
+            <div class="btn-group">
+                  <button type="button" class="btn-prev" onclick="window.history.back()">Go back</button>
+                  <button type="submit" class="btn-submit">Save & Continue</button>
+            </div>
+      </form>
+ -->
+{% extends 'postjob.html' %}
+
+{% block title %}Job Role{% endblock %}
+
+{% block section_header %}Job Requirement{% endblock %}
+
+{% block content %}
+
+      <div class="job_role">
+            <label for="">Enter job requirement</label>
+            <span></span>
+            <textarea name="job_role_description" id=""  class="job_role_description"></textarea>
+      </div>
+      
+{% endblock %}
+      
+{% block Buttons %}
+      
+      <div class="btn-group">
+            <button type="button" class="btn-prev" onclick="window.history.back()">Go back</button>
+            <button type="submit" class="btn-submit">Save & Continue</button>
+      </div> 
+{% endblock %}

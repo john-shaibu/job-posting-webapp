@@ -1,0 +1,107 @@
+{% extends 'postjob.html' %}
+
+{% block title %}Job basic info{% endblock %}
+
+{% block section_header %}Job Basic Info{% endblock %}
+
+{% block content %}
+      <div class="category">
+            <div>
+                  <label for="company_category">Company category</label>
+                  <select name="company_category" id="">
+                        <option value="#" disabled selected>Select company category</option>
+                        <option value="#">Information Technology</option>
+                        <option value="#">Art</option>
+                        <option value="#">Government</option>
+                        <option value="#">Banking and finance</option>
+                        <option value="#">Information Technology</option>
+                        <option value="#">Information Technology</option>
+                        <option value="#">Information Technology</option>
+                        <option value="#">Information Technology</option>
+                        <option value="#">Information Technology</option>
+                  </select>
+            </div>
+            <div>
+                  <label for="company_sub_category">Company's sub-category</label>
+                  <select name="company_sub_category" id="">
+                        <option value="#" disabled selected>Select company's sub-category</option>
+                        <option value="#">Information Technology</option>
+                        <option value="#">Art</option>
+                        <option value="#">Government</option>
+                        <option value="#">Banking and finance</option>
+                        <option value="#">Information Technology</option>
+                        <option value="#">Information Technology</option>
+                        <option value="#">Information Technology</option>
+                        <option value="#">Information Technology</option>
+                        <option value="#">Information Technology</option>
+                  </select>
+            </div>
+      </div>
+      <div>
+            <label for="company_description">Company description</label>
+            <textarea name="company_description" id="" placeholder="Company description"></textarea>
+      </div>
+      <div>
+            <label for="job_title">Job title</label>
+            <input type="text" name="job_title" id="" placeholder="Job title">
+      </div>
+      <hr>
+      <div class="location_description">
+            <div>
+                  <p>Job Location description</p>
+                  <span>Select an option that best describe job location</span>
+            </div>
+            <label>
+                  <input type="radio" name="job_location" id="" value="remote">
+                  <p>
+                        <strong>Remote</strong><span>select if job doesn't require user physical presence</span>
+                  </p>
+            </label>
+            <label>
+                  <input type="radio" name="job_location" id="" value="fulltime" checked>
+                  <p>
+                        <strong>Fulltime</strong><span>select if job require user physical presence</span>
+                  </p>
+            </label>
+      </div>
+      <div class="location">
+            <div>
+                  <label for="job_location">State</label>
+                  <select name="job_location" id="">
+                        <option value="#" disabled selected>select state</option>
+                        <option value="#">Abia</option>
+                        <option value="#">Adamawa</option>
+                        <option value="#">Akwa-Ibom</option>
+                        <option value="#">Anambra</option>
+                        <option value="#">Bauchi</option>
+                        <option value="#">Bayelsa</option>
+                        <option value="#">Benue</option>
+                        <option value="#">Borno</option>
+                        <option value="#">Cross-River</option>
+                  </select>
+            </div>
+            <div>
+                  <label for="job_location">Select city</label>
+                  <select name="job_location" id="">
+                        <option value="#" disabled selected>select city</option>
+                        <option value="#">Abia</option>
+                        <option value="#">Adamawa</option>
+                        <option value="#">Akwa-Ibom</option>
+                        <option value="#">Anambra</option>
+                        <option value="#">Bauchi</option>
+                        <option value="#">Bayelsa</option>
+                        <option value="#">Benue</option>
+                        <option value="#">Borno</option>
+                        <option value="#">Cross-River</option>
+                  </select>
+            </div>
+      </div>
+{% endblock %}
+
+{% block Buttons %}
+
+      <div class="btns">
+            <button type="submit" class="btn-submit">Save & Continue</button>
+      </div>
+
+{% endblock %}

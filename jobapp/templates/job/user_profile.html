@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="we post on-demand jobs in Osun state Nigeria">
+    <meta name="keywords" content="Jobs, openings, job openings, work, internship, recruitment">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/user_profile.css') }}">
+
+    <title>@username - Profile</title>
+</head>
+<body>
+      <div class="site">
+            {% include 'header.html' %}
+            <main>
+                  <div class="body_container">
+                        <div class="cover_image">
+                              <img src="{{ url_for('static', filename='images/demo_cover.jpg') }}" alt="user_cover_picture">
+                        </div>
+                        <div class="info">
+                              <div class="profile_picture">
+                                    <img src="{{ url_for('static', filename='images/image1.jpg') }}" alt="user_profile_picture">
+                              </div>
+                              <div class="profile_action">
+                                    <!-- <a href="#" class="download_cv"><button type="button"><i class="ri-attachment-2"></i>Download CV</button></a> -->
+                                    <a href="#" class="edit_profile"><button type="button"><i class="ri-quill-pen-line"></i>Edit profile</button></a>
+                              </div>
+                        </div>
+                        <div class="bio">
+                              <h3 class="fullname">John Shaibu</h3>
+                              <div class="user_bio">
+                                    <p>
+                                          Ea esse eu nostrud minim in aute. Sint amet officia veniam adipisicing pariatur. 
+                                          Pariatur ut incididunt irure sint.
+                                          Scelerisque egestas ut id diam. Amet nibh metus adipiscing lacinia 
+                                          eu a sit amet consectetu.
+                                    </p>
+                              </div>
+                              <div class="contact">
+                                    <h5>Contact</h5>
+                                    <div>
+                                          <span><i class="ri-at-line"></i><span>username</span></span>
+                                          <span><i class="ri-mail-line"></i><a href="mailto:">user@domain.com</a></span>
+                                    </div>
+                                    <div>
+                                          <span><i class="ri-phone-line"></i><span>+2348022332333</span></span>
+                                          <span><i class="ri-map-pin-2-line"></i><span>Osogbo, Osun state</span></span>
+                                    </div>
+                                    <div>
+                                          <span><i class="ri-global-line"></i><a href="#">johnshaibu.com</a></span>
+                                    </div>
+                              </div>
+                              <div class="contact">
+                                    <h5>Others</h5>
+                                    <div>
+                                          <span><i class="ri-calendar-event-line"></i><span>June 9</span></span>
+                                          <span><i class="ri-user-line"></i><span>Male</span></span>
+                                          <span><i class="ri-user-4-line"></i><span>Single</span></span>
+                                    </div>
+                              </div>
+                              <div class="contact">
+                                    <h5>Qualifications</h5>
+                                    <div>
+                                          <span><i class="ri-medal-line"></i><span>Bsc Computer science</span></span>
+                                          <span><i class="ri-medal-line"></i><span>Msc Software Eng</span></span>
+                                    </div>
+                              </div>
+                              <div class="experience">
+                                    <h5>Work experience</h5>
+                                    <ul>
+                                          <li><i class="ri-arrow-right-s-fill"></i>Frontend engineer LantopInfotech - <span>(2017 - 2019)</span></li>
+                                          <li><i class="ri-arrow-right-s-fill"></i>Frontend engineer TechCorridor - <span>(2019 - Till date)</span></li>
+                                    </ul>
+                              </div>
+                        </div>
+      
+                  </div>
+            </main>
+      </div>      
+</body>
+</html>

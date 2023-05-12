@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="we post on-demand jobs in Osun state Nigeria">
+      <meta name="keywords" content="Jobs, openings, job openings, work, internship, recruitment">
+  
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+      <title>jobtitle - hotjobsng</title>
+      <link rel="stylesheet" href="../static/styles/job.css">
+</head>
+<body>
+    <div class="site">
+          {% include 'header.html' %}
+        <main class="main-body">
+            <div class="job-title">
+                <h3>Backend Developer at LantopInfotech</h3>
+                <p>Posted by : <a href="{{ url_for('recruiter.recruiter_profile') }}">LantopInfotech</a></p>
+            </div>
+            <div class="information">
+                <span><i class="ri-calendar-line"></i>10 days ago</span>
+                <span><i class="ri-building-line"></i>LantopInfotech</span>
+                <span><i class="ri-map-pin-2-line"></i>Osogbo</span>
+                <span><i class="ri-user-line"></i>Backend Engineer</span>
+                <span><i class="ri-close-circle-line"></i>September 30, 2022</span>
+                <span><i class="ri-currency-line"></i>60,000 - 70,000 Monthly</span>
+            </div>
+            <div class="job_extratag">
+                <span><i class="ri-briefcase-2-line"></i><span>Per time</span></span>
+                <span><i class="ri-group-line"></i><span>Hiring Multiple</span></span>
+            </div>
+            <div class="action_btn">
+                <a href="#" class="apply_btn"><button type="button"><i class="ri-add-fill"></i>Apply</button></a>
+                <a href="#" class="bookmark"><button><i class="ri-bookmark-line"></i></button></a>
+            </div>
+            <div class="job_description">
+                <h5>Job Requirements</h5>
+                <ul>
+                    <li>Minimum of bsc in computer science, Engineering or related field</li>
+                    <li>Strong coding ability in Python and Javascript</li>
+                    <li>Problem solving skills and ability to communicate clearly</li>
+                    <li>Quick learning with ability to work with a team and independently</li>
+                    <li>A little bit understading of cloudDev</li>
+                </ul>
+                <h5>Job Role</h5>
+                <ul>
+                    <li>Database Administration and monitoring</li>
+                    <li>Backend Maintenance</li>
+                    <li>Backend bug fixes</li>
+                    <li>Quick learning with ability to work with a team and independently</li>
+                    <li>A little bit understading of cloudDev</li>
+                </ul>
+                <h5>Full Description</h5>
+                <p>
+                    Eu incididunt laborum aliquip commodo. Deserunt dolor culpa nisi dolore labore non ad nostrud. Nostrud sit sunt nulla ipsum enim nulla pariatur id velit. Ut ea minim id excepteur elit occaecat ea cillum reprehenderit esse. Aliquip aute consequat aute consequat fugiat labore pariatur non dolor. Culpa sit officia ut sit fugiat culpa enim. Officia eu velit non cillum et amet laboris ea.
+                    Eu incididunt laborum aliquip commodo. Deserunt dolor culpa nisi dolore labore non ad nostrud. Nostrud sit sunt nulla ipsum enim nulla pariatur id velit. Ut ea minim id excepteur elit occaecat ea cillum reprehenderit esse. Aliquip aute consequat aute consequat fugiat labore pariatur non dolor. Culpa sit officia ut sit fugiat culpa enim. Officia eu velit non cillum et amet laboris ea.
+                    Eu incididunt laborum aliquip commodo. Deserunt dolor culpa nisi dolore labore non ad nostrud. Nostrud sit sunt nulla ipsum enim nulla pariatur id velit. Ut ea minim id excepteur elit occaecat ea cillum reprehenderit esse. Aliquip aute consequat aute consequat fugiat labore pariatur non dolor. Culpa sit officia ut sit fugiat culpa enim. Officia eu velit non cillum et amet laboris ea.
+                </p>
+                
+            </div>
+            <div class="job-action">
+                <div class="tooltip" id="open_report_dialog"><a><i class="ri-flag-fill"></i></a>  
+                    <span class="tooltiptext">Report</span>
+                </div>
+                <div class="share-job">
+                    <span>Share:</span>
+                    <a id="twitterLink" target="_blank" rel="noopener noreferrer" title="Share on twitter"><i class="ri-twitter-line"></i></a>
+                    <a id="facebookLink"  target="_blank" rel="noopener noreferrer" title="Share on facebook"><i class="ri-facebook-circle-line"></i></a>
+                    <a id="shareBtn" title="Copy Link"><i class="ri-clipboard-line"></i></a>
+                    <script>
+                        const facebook = document.getElementById('facebookLink');
+                        const twitter = document.getElementById('twitterLink');
+                        const shareBtn = document.getElementById('shareBtn');
+
+                        const currentlocation = window.location.href;
+                        console.log(currentlocation)
+                        const facebookLink = `https://www.facebook.com/sharer/sharer.php?u=${currentlocation}`;
+                        const twitterLink = `https://twitter.com/intent/tweet?url=${currentlocation}`;
+                        facebook.setAttribute('href', facebookLink);
+                        twitter.setAttribute('href', twitterLink);
+                        
+                        shareBtn.addEventListener('click', function(event) {
+                            currentlocation.select;
+                            try {
+                                var successful = document.execCommand('copy');
+                                var msg = successful ? 'successful' : 'unsuccessful';
+                                console.log('Copy command was ' + msg);
+                            } catch (err) {
+                                console.log('Oops, unable to copy');
+                            }
+                            event.preventDefault;
+                        });
+                    </script>
+                </div>
+                
+
+            </div>
+            <div class="report_dialog_underlay">
+                <div class="report_job_dialog">
+                    <i class="ri-close-fill" id="close_report_dialog"></i>
+                    <h4>Report Job</h4>
+                    <form action="" method="post">
+                        <p>select an option</p>
+                        <div>
+                            <label>
+                                <input type="radio" name="option" id="" checked>
+                                <span>Incididunt excepteur ex exercitation</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="option" id="">
+                                <span>Incididunt ullamco cupidatat officia.</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="option" id="">
+                                <span>Incididunt excepteur cupidatat officia.</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="option" id="">
+                                <span>Incididunt excepteur ex exercitation officia.</span>
+                            </label>
+                        </div>
+                        <div>
+                            <label for="info">Enter additional information</label>
+                            <textarea name="info" id="" cols="30" rows="10" placeholder="Enter addtional information"></textarea>
+                        </div>
+                        <button type="submit"><i class="ri-flag-fill"></i><span>Report</span></button>
+                    </form>
+                    <script>
+                        const openReportDialog = document.getElementById('open_report_dialog');
+                        const closeReportDialog = document.getElementById('close_report_dialog');
+                        const classTo = document.querySelector('.site');
+    
+                        openReportDialog.addEventListener('click', () => {
+                            classTo.classList.add('showReportDialog');
+                        });
+                        closeReportDialog.addEventListener('click', () => {
+                            classTo.classList.remove('showReportDialog');
+                        });
+    
+    
+                    </script>
+                </div>
+            </div>
+            <div class="job_tags">
+                <span><a href="#">Backend Developer</a></span>
+                <span><a href="#">Backend Engineer</a></span>
+                <span><a href="#">Backend</a></span>
+                <span><a href="#">web Developer</a></span>
+                <span><a href="#">Python</a></span>
+            </div>
+            <div class="comment-section">
+                <form action="#">
+                    <label for="comment">Post a Comment</label>
+                    <div class="comment-box">
+                        <textarea name="comment" id="" placeholder="Enter your comment" required></textarea>
+                        <input type="submit" value="Comment">
+                    </div>
+                </form>
+            </div>
+            <div class="posted-comments">
+                <span><i class="ri-chat-1-line"></i>Posted Comments(4)</span>
+                <div class="comments animate">
+                    <h4><a href="#">John Shaibu</a><span>1 week ago</span></h4>
+                    <p>
+                        eu a sit amet consectetur. Volutpat justo, ornare volutpat lacinia. 
+                        Sed vel erat vitae bibendum urna amet ullamcorper. 
+                        Id odio a dolor, mi eu
+                    </p>
+                </div>
+            </div>                
+        </main>
+        {% include 'footer.html' %}
+    </div>
+    <!--
+        window
+  .open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, "_blank")
+  <a href="https://twitter.com/intent/tweet?url=example.com" target="_blank">Tweet</a>
+  var shareBtn = document.querySelector(".share-button");
+
+shareBtn.addEventListener('click', function(event) {
+  var cpLink = window.location.href;
+  cpLink.select();
+
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copy command was ' + msg);
+  } catch (err) {
+    console.log('Oops, unable to copy');
+  }
+  event.preventDefault;
+});
+navigator.clipboard.writeText(window.location.href);
+var dummy = document.createElement('input'),
+    text = window.location.href;
+
+document.body.appendChild(dummy);
+dummy.value = text;
+dummy.select();
+document.execCommand('copy');
+document.body.removeChild(dummy);
+    -->
+      <script src="../static/script/script.js"></script>
+</body>
+</html>

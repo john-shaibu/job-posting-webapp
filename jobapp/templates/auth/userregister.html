@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="we post on-demand jobs in Osun state Nigeria">
+    <meta name="keywords" content="Jobs, openings, job openings, work, internship, recruitment">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/styles/userregister.css">
+    <title>HotOsunJobs--Register</title>
+</head>
+<body>
+    <div id="page" class="site">
+        <div class="container">
+            <div class="logo"><a href="#">hotJobsng</a></div>
+            <p>Create a job seeker account</p>
+            {% for message in get_flashed_messages() %}
+                <div class="flash">{{ message }}</div>
+            {% endfor %}
+
+            <form method="post">
+                <div>
+                        <label for="email">Firstname and Lastname</label>
+                        <input type="text" name="fullname" id="#" placeholder="Dele Adamu" autofocus>
+                </div>
+                <div>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="#" placeholder="youremail@example.com">
+                </div>
+                <div>
+                        <label for="phone">Phone number</label>
+                        <input type="tel" name="phone" id="#" placeholder="080 111 222 33" required>
+                </div>
+                <span>OR</span>
+                <div class="sign_in_options">
+                    <a href="#"><i class="ri-google-fill"></i>Google</a>
+                    <a href="#"><i class="ri-facebook-fill"></i>Facebook</a>
+                </div>
+                <!-- <div class="checkbox">
+                        <label class="remember"><input type="checkbox" name="subscribe" id="#">Subscribe to newsletter</label>
+                </div> -->
+                <div class="submit">
+                        <input type="submit" value="Continue">
+                </div>
+                <p>Already a member? <a href="{{ url_for('auth.login') }}" target="_self">Sign In</a></p>
+            </form>
+        </div>
+        <!-- <div class="container">
+            <div class="form-box">
+                <div class="progress">
+                    <div class="logo"><a href="{{ url_for('index') }}">HotJobs.ng</a></div>
+                    <ul class="progress-steps">
+                        <li class="step active">
+                            <span>1</span>
+                            <p>Personal<br><span>30 secs to complete</span></p>
+                        </li>
+                        <li class="step">
+                            <span>2</span>
+                            <p>Contact<br><span>1 min to complete</span></p>
+                        </li>
+                        <li class="step">
+                            <span>3</span>
+                            <p>Security<br><span>1 min to complete</span></p>
+                        </li>
+                    </ul>
+                    <p class="login">Already have an account?  <a href="{{ url_for('auth.login') }}">Login</a></p>
+                </div>
+                <form action="#" method="post">
+                    <div class="form-one form-step active">
+                        <div class="bg-svg"><i class="ri-spy-fill"></i></div>
+                        <h2>Personal information</h2>
+                        <p id="info">Ensure you fill all inputs correctly</p>
+                        <div>
+                            <label for="">Firstname</label>
+                            <input type="text" name="" id="" placeholder="e.g John">
+                        </div>
+                        <div>
+                            <label for="">Lastname</label>
+                            <input type="text" name="" id="" placeholder="e.g Shaibu">
+                        </div>
+                        <div class="birth">
+                            <label for="">Date of Birth</label>
+                            <div class="grouping">
+                                <input type="text" pattern="[0-9]*" name="day" value="" min="0" max="31" placeholder="DD">
+                                <input type="text" pattern="[0-9]*" name="month" value="" min="0" max="12" placeholder="MM">
+                                <input type="text" pattern="[0-9]*" name="year" value="" min="0" max="2050" placeholder="YYYY">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-two form-step">
+                        <div class="bg-svg"><i class="ri-contacts-book-fill"></i></div>
+                        <h2>Contact</h2>
+                        <div>
+                            <label for="">Phone</label>
+                            <input type="tel" name="phone" id="" placeholder="+234**********">
+                        </div>
+                        <div>
+                            <label for="">Address</label>
+                            <input type="text" name="phone" id="" placeholder="Street Address">
+                        </div>
+                        <div>
+                            <label for="">Local Government</label>
+                            <select name="" id="">
+                                <option value="" disabled selected>Select local government</option>
+                                <option value="Osogbo">Osogbo</option>
+                                <option value="Osogbo">Ilesha</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="">City</label>
+                            <select name="" id="">
+                                <option value="" disabled selected>Select City</option>
+                                <option value="Osogbo">Osogbo</option>
+                                <option value="Osogbo">Ilesha</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-three form-step">
+                        <div class="bg-svg"><i class="ri-shield-user-fill"></i></div>
+                        <h2>Security</h2>
+                        <div>
+                            <label for="">Email</label>
+                            <input type="email" name="" id="" placeholder="youremail@example.com">
+                        </div>
+                        <div>
+                            <label for="">Username</label>
+                            <input type="text" name="" id="" placeholder="username">
+                        </div>
+                        <div class="password">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="psw" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                            <div id="message">
+                                <h3>Password must contain :</h3>
+                                <p id="letter" class="invalid">A lowercase letter</p>
+                                <p id="capital" class="invalid">A capital (uppercase) letter</p>
+                                <p id="number" class="invalid">A number</p>
+                                <p id="length" class="invalid">Minimum of 8 characters</p>
+                              </div>
+                        </div>
+                        <div>
+                            <label for="">Comfirm Password</label>
+                            <input type="password" name="" id="" placeholder="Confirm Password" >
+                        </div>
+                        <div class="checkbox">
+                            <label class="remember">
+                                <input type="checkbox" name="remember" id="#">
+                                Subscribe to Newletter
+                            </label>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn-prev" disabled="disabled">Previous</button>
+                        <button type="button" class="btn-next">Next</button>
+                        <button type="submit" class="btn-submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div> -->
+    </div>
+    <script src="../../static/script/script.js"></script>
+    <script src="../../static/script/validation.js"></script> 
+     
+</body>
+</html>

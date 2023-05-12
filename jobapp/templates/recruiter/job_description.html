@@ -1,0 +1,23 @@
+{% extends 'postjob.html' %}
+
+{% block title %}Job Role{% endblock %}
+
+{% block section_header %}Full job description{% endblock %}
+
+{% block content %}
+
+      <div class="job_role">
+            <label for="">Enter job description</label>
+            <span></span>
+            <textarea name="job_description" id=""  class="job_description"></textarea>
+      </div>
+      
+{% endblock %}
+      
+{% block Buttons %}
+      
+      <div class="btn-group">
+            <button type="button" class="btn-prev" onclick="window.history.back()">Go back</button>
+            <button type="submit" class="btn-submit">Save & Continue</button>
+      </div> 
+{% endblock %}

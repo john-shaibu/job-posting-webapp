@@ -1,0 +1,495 @@
+@import url('style.css');
+
+.site{
+      position: relative;
+}
+
+.main-body{
+      max-width: 1024px;
+      margin: 2em auto;
+      padding: 1em;
+      background-color: var(--white-color);
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 10%);
+      border-radius: 8px;
+}
+.main-body .job-title{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 1em 0;
+}
+.main-body > .job-title > h3{
+      color: var(--main-color);
+      font-weight: 800;
+
+}
+.main-body > .job-title > p{
+      color: var(--main-font-color);
+      font-size: 0.875em;
+}
+.main-body > .job-title > p > a{
+      color: var(--main-green);
+      font-size: 1em;
+      font-weight: 700;
+}
+.main-body > .job-title > p > a:hover{
+      text-decoration: underline;
+}
+.information{
+      width: 100%;
+      margin-bottom: 1em;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+}
+
+.information >span{
+      font-size: 0.875em;
+      color: var(--main-font-color);
+      display: flex;
+      align-items: center;
+      margin-right: 1em;
+      white-space: nowrap;
+      line-height: 2.2em;
+}
+.information >span > i{
+      font-size: 1.2em;
+      margin-right: 0.625em;
+      color: var(--main-color);
+}
+.job_extratag{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1em;
+      line-height: 1;
+      flex-wrap: wrap;
+      margin-bottom: 2em;
+}
+.job_extratag  >span{
+      display: flex;
+      align-items: center;
+      background-color: var(--grey-white);
+      padding: 5px;
+      border: 1px solid var(--main-border-color);
+      border-radius: 4px;
+}
+.job_extratag > span > i{
+      font-size: 1em;
+      color: var(--main-color);
+      margin-right: 0.625em;
+}
+.job_extratag > span > span{
+      font-size: 0.75em;
+      color: var(--light-grey);
+      margin-right: 0.625em;
+}
+.action_btn{
+      display: flex;
+      align-items: center;
+      gap: 1.5em;
+      margin-bottom: 2em;
+}
+.action_btn > .apply_btn button{
+      height: 40px;
+      width: 100px;
+      background-color: var(--main-color);
+      border: none;
+      color: var(--white-color);
+      font-size: 0.75em;
+      font-family: montserrat, sans-serif;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+.action_btn > .apply_btn button i{
+      font-size: 1.2em;
+      margin-right: 0.5em;
+}
+.action_btn > .bookmark button{
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      border: 1px solid var(--main-border-color);
+      background-color: var(--grey-white);
+      color: var(--main-color);
+      font-size: 1em;
+      font-weight: 600;
+      cursor: pointer;
+}
+.job_description >h5{
+      color: var(--main-color);
+
+}
+.job_description ul{
+      list-style-type: disc;
+      margin-left: 1em;
+      margin-bottom: 1em;
+}
+.job_description > ul > li{
+      font-size: 0.875em;
+      line-height: 2;
+}
+.job_description > p{
+      font-size: 0.875em;
+      line-height: 2;
+      font-weight: 500;
+}
+.job-action{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 2em;
+}
+.job-action > .tooltip{
+      position: relative;
+      transition: visibility .3s;
+}
+.job-action > .tooltip > a{
+      background-color: var(--grey-white);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--main-red);
+      font-size: 1.2em;
+      transition: background-color .3s;
+}
+.job-action > .tooltip > a:hover{
+      background-color: var(--main-border-color);
+}
+.job-action > .tooltip > .tooltiptext{
+      visibility: hidden;
+      width: 80px;
+      background-color: var(--main-font-color);
+      color: var(--white-color);
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      transform: translateY(-110%);
+      left: 140%;
+      font-size: 0.75em;
+}
+.job-action > .tooltip > .tooltiptext::after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      margin-top: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent var(--main-font-color) transparent transparent;
+}
+.job-action > .tooltip:hover > .tooltiptext{
+      visibility: visible;
+}
+.job-action >a{
+      background-color: var(--main-border-color);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--main-font-color);
+      cursor: pointer;
+}
+.job-action > .share-job{
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+}
+.job-action > .share-job > span{
+      color: var(--main-font-color);
+      font-size: 1em;
+      margin-right: 8px;
+      line-height: 1em;
+      font-weight: 500;
+}
+.job-action > .share-job > a{
+      color: var(--main-color);
+      font-size: 1.2em;
+      margin-left: 8px;
+      background-color: var(--grey-white);
+      height: 40px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: background-color .3s;
+      cursor: pointer;
+}
+.job-action > .share-job > a:hover{
+      background-color: var(--main-border-color);
+}
+.report_dialog_underlay{
+      position: fixed; /* Sit on top of the page content */
+      display: none; /* Hidden by default */
+      width: 100%; /* Full width (cover the whole page) */
+      height: 100%; /* Full height (cover the whole page) */
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+      z-index: 4; /* Specify a stack order in case you're using a different order for other elements */
+
+}
+.showReportDialog .report_dialog_underlay{
+      display: block;
+}
+.report_job_dialog{
+      position: absolute;
+      max-width: 400px;
+      background-color: var(--white-color);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 10%);
+      padding: 1em;
+      border-radius: 8px;
+}
+.report_job_dialog > i{
+      background-color: var(--grey-white);
+      width: 40px;
+      height: 40px;
+      color: var(--light-grey);
+      border-radius: 50%;
+      font-size: 1.4em;
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color .3s;
+}
+.report_job_dialog > i:hover{
+      color: var(--main-font-color);
+}
+.report_job_dialog > form > p{
+      font-size: 0.875em;
+      font-weight: 600;
+      margin-bottom: 0.5em;
+}
+.report_job_dialog > h4{
+      color: var(--main-red);
+}
+.report_job_dialog > form{
+      display: flex;
+      flex-direction: column;
+}
+.report_job_dialog > form > div:first-of-type{
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+}
+.report_job_dialog > form > div:first-of-type > label{
+      display: flex;
+      align-items: center;
+      /* background-color: var(--grey-white);
+      border-radius: 4px;
+      padding: 8px;
+      border: 1px solid var(--main-border-color); */
+
+}
+.report_job_dialog > form > div:first-of-type > label > span{
+      font-size: 0.875em;
+      color: var(--main-font-color);
+      margin-left: 0.5em;
+}
+.report_job_dialog > form > div:nth-of-type(2){
+      display: flex;
+      flex-direction: column;
+      margin: 0.5em 0;
+}
+.report_job_dialog > form > div:nth-of-type(2) > label{
+      font-size: 0.875em;
+      margin-bottom: 0.5em;
+      font-weight: 600;
+}
+.report_job_dialog > form > div:nth-of-type(2) > textarea{
+      resize: none;
+      outline: none;
+      border: 1px solid var(--main-border-color);
+      border-radius: 4px;
+      padding: 0.875em;
+      height: 100px;
+      font-family: montserrat, sans-serif;
+}
+.report_job_dialog > form > button{
+      background-color: var(--main-red);
+      border: none;
+      height: 40px;
+      border-radius: 4px;
+      color: var(--white-color);
+      font-family: montserrat, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0.9;
+      transition: opacity .3s;
+}
+.report_job_dialog > form > button:hover{
+      opacity: 1;
+}
+.report_job_dialog > form > button > i{
+      font-size: 1.2em;
+      margin-right: 0.5em;
+}
+.job_tags{
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      margin-top: 4em;
+      flex-wrap: wrap;
+}
+.job_tags span a{
+      color: var(--main-font-color);
+      font-size: 0.75em;
+      background-color: var(--grey-white);
+      border: 1px solid var(--main-border-color);
+      font-weight: 500;
+      padding: 6px;
+      border-radius: 4px;
+}
+.comment-section{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 4em;
+}
+.comment-section > form >  label{
+      font-size: 0.875em;
+      font-weight: 600;
+      margin-bottom: 0.5em;
+      color: var(--main-color);
+}
+.comment-section > form > .comment-box{
+      display: flex;
+      align-items: center;
+
+}
+
+.comment-section > form > .comment-box  textarea::placeholder{
+      color: var(--main-border-color);
+  }
+.comment-section > form > .comment-box textarea{
+      padding: 0.625em;
+      font-family: montserrat ;
+      border-radius: 4px 0 0 4px;
+      border: 1px solid var(--main-border-color);
+      width: 100%;
+      outline: none;
+      font-size: 0.875em;
+      resize: none;
+      overflow: hidden;
+      height: 40px;
+}
+.comment-section > form > .comment-box textarea:focus{
+      border: 1px solid var(--main-color);
+}
+.comment-section > form > .comment-box input[type="submit"]{
+      background-color: var(--main-color);
+      border: 1px solid var(--main-color);
+      border-radius: 0 4px 4px 0;
+      color: var(--white-color);
+      opacity: 0.9;
+      transition: opacity .3s;
+      font: 900;
+      font-size: 0.875em;
+      z-index: 2;
+      font-family: montserrat, sans-serif;
+      padding: 0 1em;
+      height: 40px;
+  }
+  .comment-section > form > .comment-box input[type="submit"]:hover{
+      opacity: 1;
+  }
+.posted-comments {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 4em 0;
+  }
+  .posted-comments > span{
+      display: flex;
+      font-size: 0.875em;
+      color: var(--main-font-color);
+      align-items: center;
+      font-weight: 500;
+  }
+  .posted-comments > span >i{
+      font-size: 1.2em;
+      color: var(--main-color);
+      margin-right: 1em;
+  }
+.posted-comments  > .comments{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+      border: 1px solid var(--main-border-color);
+      padding: 0.875em 1em;
+      background-color: var(--white-color);
+      margin-top: 0.875em;
+  }
+.posted-comments  > .comments > h4{
+      color: var(--main-color);
+      display: flex;
+      font-size: 0.875em;
+      align-items: center;
+  }
+  .posted-comments  > .comments > h4>a{
+      color: var(--main-color);
+  }
+  .posted-comments  > .comments > h4 > span{
+      color: var(--main-color);
+      font-size: 0.625em;
+      margin-left: 2em;
+      font-weight: 500;
+      opacity: .6;
+  }
+.posted-comments  > .comments > p{
+      font-size: 0.8em;
+      color: var(--main-font-color);
+}
+@media screen and (max-width : 768px){
+      .job-requirement-container{
+            display: none;
+      }
+      .main-body{
+            width: 100%;
+      }
+      .job-title > h2{
+            line-height: 1.2em;
+      }
+      .details-container{
+            padding: 0;
+      }
+      .details-container > .job-description-container{
+            width: 100%;
+            padding: 01em;
+      }
+      .job-description-container > .mobile-job-requirement{
+            display: block;
+      }
+      .comment-section{
+            width: 100%;
+      }
+}

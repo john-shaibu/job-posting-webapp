@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter</title>
+    <link rel="stylesheet" href="/static/styles/recruiter/dashboard.css">
+    <meta name="description" content="we post on-demand jobs in Osun state Nigeria">
+    <meta name="keywords" content="Jobs, openings, job openings, work, internship, recruitment">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div id="site">
+        <aside class="sidenav">
+            <div class="logo"><a href="{{ url_for('index') }}"><i class="ri-bubble-chart-fill"></i></a></div>
+            <hr>
+            <nav>
+                  <div class="tooltip"><a class="active" href="{{ url_for('recruiter.dashboard') }}"><i class="ri-home-5-line"></i></a>  
+                        <span class="tooltiptext">Home</span>
+                  </div>
+                  <div class="tooltip"><a href="{{ url_for('recruiter.post_job') }}"><i class="ri-add-circle-line"></i></a>  
+                        <span class="tooltiptext">Post new Job</span>
+                  </div>
+                  <div class="tooltip"><a href="#"><i class="ri-briefcase-line"></i></a>  
+                        <span class="tooltiptext">Active Jobs</span>
+                  </div>
+                  <div class="tooltip"><a href="#" class="message"><i class="ri-chat-2-line"></i></a>  
+                        <span class="tooltiptext">Messages (9)</span>
+                  </div>
+            </nav>   
+            <hr>
+            <div class="other-action">
+                  <div class="tooltip"><a href="#"><i class="ri-settings-4-line"></i></a>  
+                        <span class="tooltiptext">Settings</span>
+                  </div>
+                  <div class="tooltip"><a href="#" class="signout"><i class="ri-logout-box-r-line"></i></a>  
+                        <span class="tooltiptext">Sign Out</span>
+                  </div>
+            </div>  
+        </aside>
+        <main class="main">
+            {% include 'recruiter_header.html' %}
+            <div class="greetings animate">
+                <h3><span id="time">Good Evening</span>, John</h3>
+                <script>
+                    var greeting;
+                    var time = new Date().getHours();
+                    if (time < 10) {
+                        greeting = "Good morning";
+                    } else if (time < 17) {
+                        greeting = "Good day";
+                    } else {
+                        greeting = "Good evening";
+                    }
+                    document.getElementById("time").innerHTML = greeting;
+                </script>
+                <p id="quickWord">Remember to wash your hands...</p>
+                
+                <script>
+                    var quickWord = [
+                        "Have a nice day John",
+                        "It's a great day Already",
+                        "Stay calm in all situation",
+                        "Wish you goodluck in all your endeavours",
+                    ];
+                    var randomItem = quickWord[Math.floor(Math.random()*quickWord.length)];
+                    document.getElementById("quickWord").innerHTML = randomItem;
+                </script>
+            </div>
+            <div class="quick-info-container animate">
+                <div class="quick-info">
+                    <h4>Total active Jobs</h4>
+                    <p>3</p>
+                </div>
+                <div class="quick-info">
+                    <h4>Active Jobs</h4>
+                    <p>2</p>
+                </div>
+                <div class="quick-info">
+                    <h4>Total Job Reach</h4>
+                    <p>19k</p>
+                </div>
+                <div class="quick-info">
+                    <h4>Total applicant</h4>
+                    <p>300</p>
+                </div>
+            </div>
+            <div class="posted-jobs animate">
+                <h4>Posted Jobs <a href="#">See All</a></h4>
+                <div class="jobs-container">
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Applicants</th>
+                            <th>Deadline</th>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Backend Developer at LantopInfotech</a></td>
+                            <td class="pausedjob">Paused</td>
+                            <td> <strong> 78 </strong><span>Applicants</span></td>
+                            <td>September 30, 2022</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Backend Developer at LantopInfotech</a></td>
+                            <td class="activejob">Active</td>
+                            <td> <strong> 10 </strong><span>Applicants</span></td>
+                            <td>September 30, 2022</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Backend Developer at LantopInfotech</a></td>
+                            <td class="activejob">Active</td>
+                            <td> <strong> 50 </strong><span>Applicants</span></td>
+                            <td>September 30, 2022</td>
+                        </tr>
+                    </table>
+                    
+                </div>
+                
+            </div>
+
+        </main>
+    </div>
+    <script src="/static/script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% extends 'postjob.html' %}
+
+{% block title %}Set Job Preference{% endblock %}
+
+{% block section_header %}Job Preference{% endblock %}
+
+{% block content %}
+
+      <div>
+            <p>Will you like to receive notification about this Job</p>
+            <label>
+                  <input type="radio" name="Job_notification" id="" value="yes">
+                  <p>
+                        <strong>Yes</strong><span>Job notification will be sent to the specified email</span>
+                  </p>
+            </label>
+            <label>
+                  <input type="radio" name="Job_notification" id="" value="no" checked>
+                  <p>
+                        <strong>Yes</strong><span>Job notification will not be sent</span>
+                  </p>
+            </label>
+      </div>
+      <div>
+            <label for="">Email to send notification</label>
+            <input type="email" name="notification_email" id="notification_email_input">
+      </div>
+      <div>
+
+      </div>
+      
+{% endblock %}
+      
+{% block Buttons %}
+      
+      <div class="btn-group">
+            <button type="button" class="btn-prev" onclick="window.history.back()">Go back</button>
+            <button type="submit" class="btn-submit">Save & Continue</button>
+      </div> 
+{% endblock %}

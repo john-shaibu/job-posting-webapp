@@ -1,0 +1,92 @@
+@import url("dashboard.css");
+
+.container{
+      margin: 1em 0 2em 0;
+      /* max-width: 1024px; */
+}
+.container > form{
+      max-width: 1024px;
+      margin: 0 auto;
+}
+form .section > div{
+      /* border: 1px solid var(--main-border-color); */
+      border-radius: 1em;
+      margin-bottom: 2em;
+}
+form .section > div .section_header{
+      background-color: var(--main-color);
+      height: 120px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 10%);
+      padding: 2em;
+      align-items: center;
+      display: flex;
+      justify-content: left;
+      margin-bottom: 2em;
+}
+form .section > div .section_header > h2{
+      color: var(--white-color);
+}
+form .section > div .section_inner{
+      padding: 2em;
+      background-color: var(--white-color);
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 15%);
+}
+form .section > div .section_inner > div{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.5em;
+}
+
+::placeholder{
+      color: var(--light-grey);
+}
+.btns{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+}
+.btns > button.btn-submit{
+      background-color: var(--main-color);
+      height: 40px;
+      padding: 0 1em;
+      border: none;
+      border-radius: 4px;
+      color: var(--white-color);
+      font-family: montserrat, sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+}
+.btn-group{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+}
+.btn-group > button.btn-submit{
+      background-color: var(--main-color);
+      height: 40px;
+      padding: 0 1em;
+      border: none;
+      border-radius: 4px;
+      color: var(--white-color);
+      font-family: montserrat, sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+}
+.btn-group > button.btn-prev{
+      background-color: var(--white-color);
+      height: 40px;
+      padding: 0 1em;
+      border: 2px solid var(--main-color);
+      border-radius: 4px;
+      color: var(--main-color);
+      font-family: montserrat, sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      -webkit-transition: background-color .3s;
+      transition: background-color .3s;
+}
+.btn-group > button.btn-prev:hover{
+      background-color: var(--grey-white);
+}

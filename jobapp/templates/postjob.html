@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>{% block title %} Post new job {% endblock %} - Hotjobsng</title>
+
+      <link rel="stylesheet" href="/static/styles/recruiter/postjob.css">
+      <link rel="stylesheet" href="/static/styles/recruiter/basic_info.css">
+      <link rel="stylesheet" href="/static/styles/recruiter/job_role.css">
+      
+      <meta name="description" content="we post on-demand jobs in Osun state Nigeria">
+      <meta name="keywords" content="Jobs, openings, job openings, work, internship, recruitment">
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    {% endblock %}
+</head>
+<body>
+      <div id="site">
+        <aside class="sidenav">
+            <div class="logo"><a href="{{ url_for('index') }}"><i class="ri-bubble-chart-fill"></i></a></div>
+            <hr>
+            <nav>
+                  <div class="tooltip"><a href="{{ url_for('recruiter.dashboard') }}"><i class="ri-home-5-line"></i></a>  
+                        <span class="tooltiptext">Home</span>
+                  </div>
+                  <div class="tooltip"><a class="active" href="{{ url_for('recruiter.post_job') }}"><i class="ri-add-circle-line"></i></a>  
+                        <span class="tooltiptext">Post new Job</span>
+                  </div>
+                  <div class="tooltip"><a href="#"><i class="ri-briefcase-line"></i></a>  
+                        <span class="tooltiptext">Active Jobs</span>
+                  </div>
+                  <div class="tooltip"><a href="#" class="message"><i class="ri-chat-2-line"></i></a>  
+                        <span class="tooltiptext">Messages (9)</span>
+                  </div>
+            </nav>   
+            <hr>
+            <div class="other-action">
+                  <div class="tooltip"><a href="#"><i class="ri-settings-4-line"></i></a>  
+                        <span class="tooltiptext">Settings</span>
+                  </div>
+                  <div class="tooltip"><a href="#" class="signout"><i class="ri-logout-box-r-line"></i></a>  
+                        <span class="tooltiptext">Sign Out</span>
+                  </div>
+            </div>  
+        </aside>
+        <main class="main">
+            {% include 'recruiter_header.html' %}
+            <div class="container">
+                  <form method="POST">
+                        <div class="section">
+                              <div>
+                                    <div class="section_header">
+                                          <h2>{% block section_header %}{% endblock %}</h2>
+                                    </div>
+                                    <div class="section_inner">
+                                          <!-- <div class="category">
+                                                <div>
+                                                      <label for="company_category">Company category</label>
+                                                      <select name="company_category" id="">
+                                                            <option value="#" disabled selected>Select company category</option>
+                                                            <option value="#">Information Technology</option>
+                                                            <option value="#">Art</option>
+                                                            <option value="#">Government</option>
+                                                            <option value="#">Banking and finance</option>
+                                                            <option value="#">Information Technology</option>
+                                                            <option value="#">Information Technology</option>
+                                                            <option value="#">Information Technology</option>
+                                                            <option value="#">Information Technology</option>
+                                                            <option value="#">Information Technology</option>
+                                                      </select>
+                                                </div>
+                                                <div>
+                                                      <label for="company_sub_category">Company's sub-category</label>
+                                                      <select name="company_sub_category" id="">
+                                                            <option value="#" disabled selected>Select company's sub-category</option>
+                                                            <option value="#">Information Technology</option>
+                                                            <option value="#">Art</option>
+                                                            <option value="#">Government</option>
+                                                            <option value="#">Banking and finance</option>
+                                                            <option value="#">Information Technology</option>
+                                                            <option value="#">Information Technology</option>
+                                                            <option value="#">Information Technology</option>
+                                                            <option value="#">Information Technology</option>
+                                                            <option value="#">Information Technology</option>
+                                                      </select>
+                                                </div>
+                                          </div>
+                                          <div>
+                                                <label for="company_description">Company description</label>
+                                                <textarea name="company_description" id="" placeholder="Company description"></textarea>
+                                          </div>
+                                          <div>
+                                                <label for="job_title">Job title</label>
+                                                <input type="text" name="job_title" id="" placeholder="Job title">
+                                          </div>
+                                          <hr>
+                                          <div class="location_description">
+                                                <div>
+                                                      <p>Job Location description</p>
+                                                      <span>Select an option that best describe job location</span>
+                                                </div>
+                                                <label>
+                                                      <input type="radio" name="job_location" id="" value="remote">
+                                                      <p>
+                                                            <strong>Remote</strong><span>select if job doesn't require user physical presence</span>
+                                                      </p>
+                                                </label>
+                                                <label>
+                                                      <input type="radio" name="job_location" id="" value="fulltime" checked>
+                                                      <p>
+                                                            <strong>Fulltime</strong><span>select if job require user physical presence</span>
+                                                      </p>
+                                                </label>
+                                          </div>
+                                          <div class="location">
+                                                <div>
+                                                      <label for="job_location">State</label>
+                                                      <select name="job_location" id="">
+                                                            <option value="#" disabled selected>select state</option>
+                                                            <option value="#">Information Technology</option>
+                                                            <option value="#">Art</option>
+                                                            <option value="#">Government</option>
+                                                            <option value="#">Banking and finance</option>
+                                                            <option value="#">Information Technology</option>
+                                                            <option value="#">Information Technology</option>
+                                                            <option value="#">Information Technology</option>
+                                                            <option value="#">Information Technology</option>
+                                                            <option value="#">Information Technology</option>
+                                                      </select>
+                                                </div>
+                                                <div>
+                                                      <label for="job_location">Select city</label>
+                                                      <select name="job_location" id="">
+                                                            <option value="#" disabled selected>select city</option>
+                                                            <option value="#">Information Technology</option>
+                                                            <option value="#">Art</option>
+                                                            <option value="#">Government</option>
+                                                            <option value="#">Banking and finance</option>
+                                                            <option value="#">Information Technology</option>
+                                                            <option value="#">Information Technology</option>
+                                                            <option value="#">Information Technology</option>
+                                                            <option value="#">Information Technology</option>
+                                                            <option value="#">Information Technology</option>
+                                                      </select>
+                                                </div>
+                                          </div> -->
+                                          {% block content %}
+                
+                                          {% endblock %}
+                                    </div>    
+                              </div>
+                              <!-- <script>
+                                    let userJobLocationDescription = document.querySelector("input[name='job_location']:checked").value;
+                                    let jobLocationDisplay = document.querySelector('.location');
+            
+                                    console.log(userJobLocationDescription);
+                                    
+                                    userJobLocationDescription.addEventListener('change', () => {
+                                          if (userJobLocationDescription == 'remote'){
+                                                jobLocationDisplay.style.display = 'none';
+                                                console.log('display = block');
+                                          } else if (userJobLocationDescription == 'fulltime'){
+                                                jobLocationDisplay.style.display = 'flex';
+                                                console.log('display = flex');
+                                          }
+                                    });
+            
+                                    
+                              </script> -->
+                        </div>
+                        {% block Buttons %}
+
+                        {% endblock %}
+                  </form>
+
+            </div>
+
+        </main>
+      </div>
+      <script src="/static/script/validation.js"></script>
+      <script src="/static/script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="we post on-demand jobs in Osun state Nigeria">
+    <meta name="keywords" content="Jobs, openings, job openings, work, internship, recruitment">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+
+    <title>jobs - hotjobsng</title>
+</head>
+<body>
+    <div class="site">
+        {% include 'header.html' %}
+        <div class="main">
+            <aside class="filter">
+                {% include 'filter_search.html' %}
+                <div class="city-filter-section">
+                    <p>JOBS BY STATE</p>
+                    <ul>
+                        <li><a href="#"><span>Jobs in Lagos</span><label>15</label></a></li>
+                        <li><a href="#"><span>Jobs in Port Harcort</span><label>12</label></a></li>
+                        <li><a href="#"><span>Jobs in Akure</span><label>9+</label></a></li>
+                        <li><a href="#"><span>Jobs in Ondo</span><label>9+</label></a></li>
+                        <li><a href="#"><span>Jobs in Oyo</span><label>20</label></a></li>
+                        <li><a href="#"><span>Jobs in FCT</span><label>15</label></a></li>
+                        <li><a href="#"><span>Jobs in Enugu</span><label>12</label></a></li>
+                        <li><a href="#"><span>Jobs in Edo</span><label>9+</label></a></li>
+                        <li><a href="#"><span>Jobs in Akwa Ibom</span><label>9+</label></a></li>
+                        <li><a href="#"><span>Jobs in Osun</span><label>20</label></a></li>
+                        <li><a href="#">See more</a></li>
+                    </ul>
+                </div>
+            </aside>
+            
+            <main class="job-section">
+                <span class="open_filter">
+                    <i class="ri-sound-module-fill"></i>
+                </span>
+                <div class="quick-links">
+                    <div class="quick-links-container">
+                        <a href='#' class="active">All</a>
+                        <a href="/?q=trending">Trending</a>
+                        <a href="#">Featured</a>
+                        <a href="#">Remote</a>
+                        <a href="#">Internship</a>
+                        <a href="#">Fulltime</a>
+                        <a href="#">Pertime</a>
+                    </div>
+                    <div class="navigator">
+                        <div class="left" onclick="rightScroll()"><i class="ri-arrow-left-s-line"></i></div>
+                        <div class="right" onclick="leftScroll()"><i class="ri-arrow-right-s-line"></i></div>
+                    </div>
+                </div>
+                <!-- <div class="trending-header">
+                    <h3>Trending Jobs</h3>
+                    <p>Trending jobs in the last 24 hours</p>
+                </div> -->
+                <!-- Slider main container -->
+                <!-- <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <h4><a href="#">Google product designer</a></h4>
+                            <div class="job-insight">
+                                <span><i class="ri-calendar-line"></i>August 29, 2022</span>
+                                <span><i class="ri-building-line"></i>LantopInfotech</span>
+                            </div>
+                            <p>
+                                Scelerisque egestas ut id diam. Amet nibh metus adipiscing lacinia 
+                                eu a sit amet consectetur.
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <h4><a href="#">Google product designer</a></h4>
+                            <div class="job-insight">
+                                <span><i class="ri-calendar-line"></i>August 29, 2022</span>
+                                <span><i class="ri-building-line"></i>LantopInfotech</span>
+                            </div>
+                            <p>
+                                Scelerisque egestas ut id diam. Amet nibh metus adipiscing lacinia 
+                                eu a sit amet consectetur.
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <h4><a href="#">Google product designer</a></h4>
+                            <div class="job-insight">
+                                <span><i class="ri-calendar-line"></i>August 29, 2022</span>
+                                <span><i class="ri-building-line"></i>LantopInfotech</span>
+                            </div>
+                            <p>
+                                Scelerisque egestas ut id diam. Amet nibh metus adipiscing lacinia 
+                                eu a sit amet consectetur.
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <h4><a href="#">Google product designer</a></h4>
+                            <div class="job-insight">
+                                <span><i class="ri-calendar-line"></i>August 29, 2022</span>
+                                <span><i class="ri-building-line"></i>LantopInfotech</span>
+                            </div>
+                            <p>
+                                Scelerisque egestas ut id diam. Amet nibh metus adipiscing lacinia 
+                                eu a sit amet consectetur.
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <h4><a href="#">Google product designer</a></h4>
+                            <div class="job-insight">
+                                <span><i class="ri-calendar-line"></i>August 29, 2022</span>
+                                <span><i class="ri-building-line"></i>LantopInfotech</span>
+                            </div>
+                            <p>
+                                Scelerisque egestas ut id diam. Amet nibh metus adipiscing lacinia 
+                                eu a sit amet consectetur.
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <h4><a href="#">Google product designer</a></h4>
+                            <div class="job-insight">
+                                <span><i class="ri-calendar-line"></i>August 29, 2022</span>
+                                <span><i class="ri-building-line"></i>LantopInfotech</span>
+                            </div>
+                            <p>
+                                Scelerisque egestas ut id diam. Amet nibh metus adipiscing lacinia 
+                                eu a sit amet consectetur.
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <h4><a href="#">Google product designer</a></h4>
+                            <div class="job-insight">
+                                <span><i class="ri-calendar-line"></i>August 29, 2022</span>
+                                <span><i class="ri-building-line"></i>LantopInfotech</span>
+                            </div>
+                            <p>
+                                Scelerisque egestas ut id diam. Amet nibh metus adipiscing lacinia 
+                                eu a sit amet consectetur.
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <h4><a href="#">Google product designer</a></h4>
+                            <div class="job-insight">
+                                <span><i class="ri-calendar-line"></i>August 29, 2022</span>
+                                <span><i class="ri-building-line"></i>LantopInfotech</span>
+                            </div>
+                            <p>
+                                Scelerisque egestas ut id diam. Amet nibh metus adipiscing lacinia 
+                                eu a sit amet consectetur.
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="jobs-container">
+                    <div class="jobs animate">
+                        <h4><a href="{{ url_for('job.job_page') }}" target="_top">Backend Engineer at LantopInfotech</a></h4>
+                        <div class="job_insight">
+                            <span><i class="ri-calendar-line"></i><span>2 days ago</span></span>
+                            <span><i class="ri-user-line"></i><span>Backend Developer</span></span>
+                            <span><i class="ri-building-line"></i><span>LantopInfotech</span></span>
+                            <span><i class="ri-map-pin-2-line"></i><span>Osogbo</span></span>
+                        </div>
+                        <div>
+                            <p>
+                                Scelerisque egestas ut id diam. Amet nibh metus adipiscing lacinia 
+                                eu a sit amet consectetur. Volutpat justo, ornare volutpat lacinia...
+                            </p>
+                        </div>
+                        <div class="job_tags">
+                            <span><i class="ri-briefcase-2-line"></i><span>Remote</span></span>
+                            <span><i class="ri-group-line"></i><span>Hiring Multiple</span></span>
+
+                        </div>
+                    </div>
+                    <div class="jobs animate">
+                        <h4><a href="{{ url_for('job.job_page') }}" target="_top">Backend Engineer at LantopInfotech</a></h4>
+                        <div class="job_insight">
+                            <span><i class="ri-calendar-line"></i><span>2 days ago</span></span>
+                            <span><i class="ri-user-line"></i><span>Backend Developer</span></span>
+                            <span><i class="ri-building-line"></i><span>LantopInfotech</span></span>
+                            <span><i class="ri-map-pin-2-line"></i><span>Osogbo</span></span>
+                        </div>
+                        <div>
+                            <p>
+                                Scelerisque egestas ut id diam. Amet nibh metus adipiscing lacinia 
+                                eu a sit amet consectetur. Volutpat justo, ornare volutpat lacinia...
+                            </p>
+                        </div>
+                        <div class="job_tags">
+                            <span><i class="ri-briefcase-2-line"></i><span>Full time</span></span>
+                            <span><i class="ri-group-line"></i><span>Hiring Multiple</span></span>
+
+                        </div>
+                    </div>
+                    <div class="jobs animate">
+                        <h4><a href="{{ url_for('job.job_page') }}" target="_top">Backend Engineer at LantopInfotech</a></h4>
+                        <div class="job_insight">
+                            <span><i class="ri-calendar-line"></i><span>2 days ago</span></span>
+                            <span><i class="ri-user-line"></i><span>Backend Developer</span></span>
+                            <span><i class="ri-building-line"></i><span>LantopInfotech</span></span>
+                            <span><i class="ri-map-pin-2-line"></i><span>Osogbo</span></span>
+                        </div>
+                        <div>
+                            <p>
+                                Scelerisque egestas ut id diam. Amet nibh metus adipiscing lacinia 
+                                eu a sit amet consectetur. Volutpat justo, ornare volutpat lacinia...
+                            </p>
+                        </div>
+                        <div class="job_tags">
+                            <span><i class="ri-briefcase-2-line"></i><span>Per time</span></span>
+                            <span><i class="ri-group-line"></i><span>Hiring Multiple</span></span>
+                        </div>
+                    </div>
+                    <div class="jobs animate">
+                        <h4><a href="{{ url_for('job.job_page') }}" target="_top">Backend Engineer at LantopInfotech</a></h4>
+                        <div class="job_insight">
+                            <span><i class="ri-calendar-line"></i><span>2 days ago</span></span>
+                            <span><i class="ri-user-line"></i><span>Backend Developer</span></span>
+                            <span><i class="ri-building-line"></i><span>LantopInfotech</span></span>
+                            <span><i class="ri-map-pin-2-line"></i><span>Osogbo</span></span>
+                        </div>
+                        <div>
+                            <p>
+                                Scelerisque egestas ut id diam. Amet nibh metus adipiscing lacinia 
+                                eu a sit amet consectetur. Volutpat justo, ornare volutpat lacinia...
+                            </p>
+                        </div>
+                        <div class="job_tags">
+                            <span><i class="ri-briefcase-2-line"></i><span>Internship</span></span>
+                            <span><i class="ri-group-line"></i><span>Hiring Multiple</span></span>
+
+                        </div>
+                    </div>
+                    <div class="jobs animate">
+                        <h4><a href="{{ url_for('job.job_page') }}" target="_top">Backend Engineer at LantopInfotech</a></h4>
+                        <div class="job_insight">
+                            <span><i class="ri-calendar-line"></i><span>2 days ago</span></span>
+                            <span><i class="ri-user-line"></i><span>Backend Developer</span></span>
+                            <span><i class="ri-building-line"></i><span>LantopInfotech</span></span>
+                            <span><i class="ri-map-pin-2-line"></i><span>Osogbo</span></span>
+                        </div>
+                        <div>
+                            <p>
+                                Scelerisque egestas ut id diam. Amet nibh metus adipiscing lacinia 
+                                eu a sit amet consectetur. Volutpat justo, ornare volutpat lacinia...
+                            </p>
+                        </div>
+                        <div class="job_tags">
+                            <span><i class="ri-briefcase-2-line"></i><span>Remote</span></span>
+                            <span><i class="ri-group-line"></i><span>Hiring Multiple</span></span>
+
+                        </div>
+                    </div>
+                    <div class="jobs animate">
+                        <h4><a href="{{ url_for('job.job_page') }}" target="_top">Backend Engineer at LantopInfotech</a></h4>
+                        <div class="job_insight">
+                            <span><i class="ri-calendar-line"></i><span>2 days ago</span></span>
+                            <span><i class="ri-user-line"></i><span>Backend Developer</span></span>
+                            <span><i class="ri-building-line"></i><span>LantopInfotech</span></span>
+                            <span><i class="ri-map-pin-2-line"></i><span>Osogbo</span></span>
+                        </div>
+                        <div>
+                            <p>
+                                Scelerisque egestas ut id diam. Amet nibh metus adipiscing lacinia 
+                                eu a sit amet consectetur. Volutpat justo, ornare volutpat lacinia...
+                            </p>
+                        </div>
+                        <div class="job_tags">
+                            <span><i class="ri-briefcase-2-line"></i><span>Remote</span></span>
+                            <span><i class="ri-group-line"></i><span>Hiring Multiple</span></span>
+
+                        </div>
+                    </div>
+                    <div class="jobs animate">
+                        <h4><a href="{{ url_for('job.job_page') }}" target="_top">Backend Engineer at LantopInfotech</a></h4>
+                        <div class="job_insight">
+                            <span><i class="ri-calendar-line"></i><span>2 days ago</span></span>
+                            <span><i class="ri-user-line"></i><span>Backend Developer</span></span>
+                            <span><i class="ri-building-line"></i><span>LantopInfotech</span></span>
+                            <span><i class="ri-map-pin-2-line"></i><span>Osogbo</span></span>
+                        </div>
+                        <div>
+                            <p>
+                                Scelerisque egestas ut id diam. Amet nibh metus adipiscing lacinia 
+                                eu a sit amet consectetur. Volutpat justo, ornare volutpat lacinia...
+                            </p>
+                        </div>
+                        <div class="job_tags">
+                            <span><i class="ri-briefcase-2-line"></i><span>Remote</span></span>
+                            <span><i class="ri-group-line"></i><span>Hiring Multiple</span></span>
+
+                        </div>
+                    </div>
+                    <div class="jobs animate">
+                        <h4><a href="{{ url_for('job.job_page') }}" target="_top">Backend Engineer at LantopInfotech</a></h4>
+                        <div class="job_insight">
+                            <span><i class="ri-calendar-line"></i><span>2 days ago</span></span>
+                            <span><i class="ri-user-line"></i><span>Backend Developer</span></span>
+                            <span><i class="ri-building-line"></i><span>LantopInfotech</span></span>
+                            <span><i class="ri-map-pin-2-line"></i><span>Osogbo</span></span>
+                        </div>
+                        <div>
+                            <p>
+                                Scelerisque egestas ut id diam. Amet nibh metus adipiscing lacinia 
+                                eu a sit amet consectetur. Volutpat justo, ornare volutpat lacinia...
+                            </p>
+                        </div>
+                        <div class="job_tags">
+                            <span><i class="ri-briefcase-2-line"></i><span>Remote</span></span>
+                            <span><i class="ri-group-line"></i><span>Hiring Multiple</span></span>
+
+                        </div>
+                    </div>
+                    <div class="jobs animate">
+                        <h4><a href="{{ url_for('job.job_page') }}" target="_top">Backend Engineer at LantopInfotech</a></h4>
+                        <div class="job_insight">
+                            <span><i class="ri-calendar-line"></i><span>2 days ago</span></span>
+                            <span><i class="ri-user-line"></i><span>Backend Developer</span></span>
+                            <span><i class="ri-building-line"></i><span>LantopInfotech</span></span>
+                            <span><i class="ri-map-pin-2-line"></i><span>Osogbo</span></span>
+                        </div>
+                        <div>
+                            <p>
+                                Scelerisque egestas ut id diam. Amet nibh metus adipiscing lacinia 
+                                eu a sit amet consectetur. Volutpat justo, ornare volutpat lacinia...
+                            </p>
+                        </div>
+                        <div class="job_tags">
+                            <span><i class="ri-briefcase-2-line"></i><span>Remote</span></span>
+                            <span><i class="ri-group-line"></i><span>Hiring Multiple</span></span>
+
+                        </div>
+                    </div>
+                    <div class="jobs animate">
+                        <h4><a href="{{ url_for('job.job_page') }}" target="_top">Backend Engineer at LantopInfotech</a></h4>
+                        <div class="job_insight">
+                            <span><i class="ri-calendar-line"></i><span>2 days ago</span></span>
+                            <span><i class="ri-user-line"></i><span>Backend Developer</span></span>
+                            <span><i class="ri-building-line"></i><span>LantopInfotech</span></span>
+                            <span><i class="ri-map-pin-2-line"></i><span>Osogbo</span></span>
+                        </div>
+                        <div>
+                            <p>
+                                Scelerisque egestas ut id diam. Amet nibh metus adipiscing lacinia 
+                                eu a sit amet consectetur. Volutpat justo, ornare volutpat lacinia...
+                            </p>
+                        </div>
+                        <div class="job_tags">
+                            <span><i class="ri-briefcase-2-line"></i><span>Remote</span></span>
+                            <span><i class="ri-group-line"></i><span>Hiring Multiple</span></span>
+
+                        </div>
+                    </div>
+                    <div class="jobs animate">
+                        <h4><a href="{{ url_for('job.job_page') }}" target="_top">Backend Engineer at LantopInfotech</a></h4>
+                        <div class="job_insight">
+                            <span><i class="ri-calendar-line"></i><span>2 days ago</span></span>
+                            <span><i class="ri-user-line"></i><span>Backend Developer</span></span>
+                            <span><i class="ri-building-line"></i><span>LantopInfotech</span></span>
+                            <span><i class="ri-map-pin-2-line"></i><span>Osogbo</span></span>
+                        </div>
+                        <div>
+                            <p>
+                                Scelerisque egestas ut id diam. Amet nibh metus adipiscing lacinia 
+                                eu a sit amet consectetur. Volutpat justo, ornare volutpat lacinia...
+                            </p>
+                        </div>
+                        <div class="job_tags">
+                            <span><i class="ri-briefcase-2-line"></i><span>Remote</span></span>
+                            <span><i class="ri-group-line"></i><span>Hiring Multiple</span></span>
+
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        {% include 'footer.html' %}        
+    </div>
+    
+    <script src="../../static/script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+     <!-- Initialize Swiper -->
+     <script>
+       var swiper = new Swiper(".mySwiper", {
+         slidesPerView: 1.8,
+         spaceBetween: 20,
+         freeMode: true,
+        //  pagination: {
+        //    el: ".swiper-pagination",
+        //    clickable: true,
+        //  },
+       });
+     </script>
+</body>
+</html>
